@@ -1,7 +1,10 @@
 package se.lexicon;
 
+import se.lexicon.model.BankAccount;
+import se.lexicon.model.Customer;
+
 /**
- * Hello world!
+ * To Run the java app
  */
 public class App {
     public static void main(String[] args) {

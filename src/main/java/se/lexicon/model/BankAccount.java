@@ -1,4 +1,6 @@
-package se.lexicon;
+package se.lexicon.model;
+
+import se.lexicon.model.sequencer.AccountNumberGenerator;
 
 public class BankAccount {
 

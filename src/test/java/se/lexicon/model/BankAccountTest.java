@@ -1,10 +1,12 @@
-package se.lexicon;
+package se.lexicon.model;
 
 //import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import se.lexicon.model.BankAccount;
+import se.lexicon.model.Customer;
 
 public class BankAccountTest {
 
