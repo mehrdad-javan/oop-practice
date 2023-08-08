@@ -1,6 +1,8 @@
 package se.lexicon;
 
-import org.junit.jupiter.api.Assertions;
+//import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +22,7 @@ public class BankAccountTest {
     public void testAccountNumber(){
         long expectedResult = 1;
         long actualResult = testAccount.getAccountNumber();
-        Assertions.assertEquals(expectedResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -29,7 +31,7 @@ public class BankAccountTest {
         BankAccount bankAccount2 = new BankAccount(100, customer2);
         long expectedResult = 2;
         long actualResult = bankAccount2.getAccountNumber();
-        Assertions.assertEquals(expectedResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -37,19 +39,19 @@ public class BankAccountTest {
         testAccount.deposit(500.0);
         double expectedBalance = 1500;
         double actualBalance = testAccount.getBalance(); // 1500.0
-        Assertions.assertEquals(expectedBalance, actualBalance);
+        assertEquals(expectedBalance, actualBalance);
     }
 
     @Test
     public void testWithdraw() {
         testAccount.withdraw(200.0);
-        Assertions.assertEquals(800.0, testAccount.getBalance());
+        assertEquals(800.0, testAccount.getBalance());
     }
 
 
     @Test
     public void testNegativeAmountToWithdraw_ThrowsIllegalArgumentException() {
-        Assertions.assertThrows(
+        assertThrows(
                 IllegalArgumentException.class,
                 () -> testAccount.withdraw(-100)
         );
