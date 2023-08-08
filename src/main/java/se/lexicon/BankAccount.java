@@ -49,7 +49,7 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) {
-        if (amount < 0) throw new IllegalArgumentException("Cannot deposit a negative amount.");
+        if (amount < 0) throw new IllegalArgumentException("Cannot withdraw a negative amount.");
         if (amount > balance) throw new IllegalArgumentException("Withdrawal denied: insufficient founds.");
         balance -= amount;
     }
